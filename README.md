@@ -13,3 +13,9 @@
 
 ### Captura #4:
 ![Captura 4](/imgs/C04.png)
+
+### Captura #5:
+![Captura 5](/imgs/C05.png)
+
+### Captura #6:
+![Captura 6](/imgs/C06.png)

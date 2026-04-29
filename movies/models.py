@@ -1,6 +1,7 @@
 from django.db import models
+from actors.models import Actor  # NUEVO
 
-# NUEVO
+
 class Genre(models.Model):
     name = models.CharField(max_length=100, unique=True)
 
@@ -13,8 +14,10 @@ class Movie(models.Model):
     description = models.TextField()
     release_year = models.PositiveIntegerField()
 
-    # CAMBIO: antes era ForeignKey, ahora ManyToMany
-    genres = models.ManyToManyField(Genre, related_name="movies")  # NUEVO
+    genres = models.ManyToManyField(Genre, related_name="movies")
+
+    # NUEVO
+    actors = models.ManyToManyField(Actor, related_name="movies")
 
     def __str__(self):
         return self.title
