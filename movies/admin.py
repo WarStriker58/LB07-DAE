@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Movie, Genre
 
+# NUEVO
 @admin.register(Genre)
 class GenreAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
@@ -9,6 +10,8 @@ class GenreAdmin(admin.ModelAdmin):
 
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'release_year', 'genre')
-    list_filter = ('genre', 'release_year')
+    list_display = ('id', 'title', 'release_year')
     search_fields = ('title',)
+
+    # NUEVO: permite seleccionar géneros en el admin
+    filter_horizontal = ("genres",)  # IMPORTANTE

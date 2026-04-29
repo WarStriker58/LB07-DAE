@@ -2,6 +2,8 @@ from rest_framework import viewsets
 from .models import Movie, Genre
 from .serializers import MovieSerializer, GenreSerializer
 
+
+# NUEVO
 class GenreViewSet(viewsets.ModelViewSet):
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer

@@ -1,14 +1,17 @@
 from rest_framework import serializers
 from .models import Movie, Genre
 
+# NUEVO
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
-        fields = '__all__'
+        fields = "__all__"
+
 
 class MovieSerializer(serializers.ModelSerializer):
-    genre = GenreSerializer()
+    # CAMBIO
+    genres = GenreSerializer(many=True)  # NUEVO
 
     class Meta:
         model = Movie
-        fields = '__all__'
+        fields = "__all__"

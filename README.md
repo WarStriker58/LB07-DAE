@@ -7,3 +7,9 @@
 
 ### Captura #2:
 ![Captura 2](/imgs/C02.png)
+
+### Captura #3:
+![Captura 3](/imgs/C03.png)
+
+### Captura #4:
+![Captura 4](/imgs/C04.png)
